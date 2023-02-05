@@ -1,0 +1,182 @@
+/* external css: flickity.css */
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html { overflow-y: scroll; }
+
+img{
+    display: block;
+    max-width: 60%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    font-family: "Shippori Mincho", serif;
+    width: 85%;
+    margin: 0 auto;
+    padding: 2.5rem 1.22rem;
+    background: linear-gradient(#FDFAF7, #EEDEF6, #af999a, #603335);
+}
+.header-link {
+    font-size: 0.22rem;
+    line-height: 0.22rem;
+    font-weight: 400;
+    font-size: medium;
+    color: #303030;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.64rem 0.88rem 0;
+}
+
+.line {
+    display: flex;
+}
+
+.carousel {
+    padding: 0rem 0.88rem 0;
+    height: 250px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carousel-cell {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(#EEC8E6, #EEDEF6, #E9DCF9);
+    border-radius: 20px;
+    counter-increment: gallery-cell;
+}
+
+.cell {
+    alignment: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 120px;
+    padding: 0.64rem 0.88rem 0;
+    background: linear-gradient(#EEC8E6, #EEDEF6, #E9DCF9);
+    border-radius: 10px;
+}
+
+form{
+    alignment: center;
+    padding: 0.64rem 0.88rem 2.5rem;
+    margin-bottom: 20px;
+}
+
+textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8px;
+    width: 75%;
+    background: rgba(255,255,255,.25);
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border-color: transparent;
+    font-family: "Shippori Mincho", serif;
+    font-size: medium;
+    color: #603335;
+    resize: none;
+}
+
+select{
+    margin-bottom: 8px;
+    margin-left: 75em;
+    background: rgba(255,255,255,.25);
+    height: 20px;
+    border-radius: 4px;
+    border-color: transparent;
+    color: #603335;
+    font-family: 'Roboto', Arial;
+}
+
+option {
+
+}
+
+input {
+    background: rgba(255,255,255,.25);
+    font-family: "Shippori Mincho", serif;
+    margin-bottom: 4px;
+    margin-left: 1em;
+    color: #603335;
+    border-radius: 4px;
+    font-size: medium;
+}
+
+.c-keyword {
+    line-height: 1;
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 100;
+    position: center;
+    vertical-align: center;
+}
+
+.keyword {
+    font-family: "Shippori Mincho", serif;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 1;
+    color: #303030;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.25rem;
+}
+
+.definition {
+    width: 90%;
+    margin-top: 1em;
+    margin-left: 1em;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-family: 'Figtree', serif;
+    font-weight: 500;
+    color: #303030;
+}
+
+.flickity-button {
+    background: transparent;
+}
+/* big previous & next buttons */
+.flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+}
+/* icon color */
+.flickity-button-icon {
+    fill: transparent;
+}
+
+.flickity-button:hover {
+    background: transparent;
+}
+
+.flickity-page-dots {
+    bottom: 0px;
+}
+
+.flickity-page-dots .dot {
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}

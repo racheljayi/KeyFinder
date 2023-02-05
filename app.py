@@ -19,7 +19,8 @@ inputSourceDic = {
     3: "Literary Text",
     4: "Article"
 }
-
+wordCount = 0
+keyDict = {}
 
 @app.route('/')
 def index():  # base code
@@ -27,12 +28,42 @@ def index():  # base code
 
 
 @app.route('/route', methods=['post'])
+def generate_html_response():
+    global keyDict
+    keyDict = listbuilder()
+    with open("templates/index.html", "r") as file:
+        content = file.read()
+    content = content.replace("<!-- INSERT CAROUSEL HERE -->", toCarousel())
+    content = content.replace("<!-- INSERT TABLE HERE -->", toFormat())
+    return content
+
+def toCarousel():
+    global keyDict
+    html_carousel = "<div class=\"carousel\" data-flickity='{ \"wrapAround\": true, \"autoPlay\": true}'>"
+    for key in keyDict.keys():
+        html_carousel += "<div class=\"carousel-cell\">"
+        html_carousel += "<div class=\"c-keyword\">" + str(key) + "</div>"
+        html_carousel += "</div>"
+    html_carousel += "</div>"
+    return html_carousel
+
+def toFormat():
+    global keyDict
+    html_format = ""
+    for key, value in keyDict.items():
+        html_format += "<div class=\"cell\">"
+        html_format += "<div class=\"keyword\">" + str(key) + "</div>"
+        html_format += "<div class=\"definition\">" + str(value) + "</div>"
+        html_format += "</div>"
+    return html_format
+
 def listbuilder():
-    global inputText, inputSource
+    global inputText, inputSource, wordCount
     inputText = request.form['input_text']
-    inputSource = inputSourceDic[request.form['input_source']]
-    getDefinition(keyFinder())
-    return getDefinition(keyFinder())
+    inputSource = inputSourceDic[int(request.form['input_source'])]
+    x = getDefinition(keyFinder())
+    wordCount = len(x)
+    return x
 
 
 def keyFinder():  # grab & store keywords, call getDefinition

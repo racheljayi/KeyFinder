@@ -1,10 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="static/script.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>KeyFinder</title>
 </head>
+<header class="header">
+    <img src="static/logo.png" alt="KeyFinder Logo" class="center">
+</header>
 <body>
-
+    <p>
+        <form action="/route" method="post">
+            <div>
+                <textarea name="input_text">Input text...</textarea>
+            </div>
+            <div class="line">
+                <select id="input_source" name="input_source">
+                    <option value=1>Academic Text</option>
+                    <option value=2>Scientific Text</option>
+                    <option value=3>Literary Text</option>
+                    <option value=4>Article</option>
+                </select>
+                <input type="submit" name= "form"/>
+            </div>
+        </form>
+        <!-- INSERT CAROUSEL HERE -->
+        <!-- INSERT TABLE HERE -->
+        <img src="static/ezgif.com-gif-maker.gif" alt="This is an animated gif image"/>
+    </p>
 </body>
 </html>
