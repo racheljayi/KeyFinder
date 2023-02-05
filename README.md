@@ -1,5 +1,6 @@
+![KeyFinder](https://i.imgur.com/FpD7ra1.png)
 # KeyFinder
-*Project for SheInnovates 2023* 
+*Project for SheInnovates 2023*
 
 KeyFinder is a flashcard building Flask app that utilizes ChatGPT and Google's Search API to pull and define keywords 
 from any given text.
