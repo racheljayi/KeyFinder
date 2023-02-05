@@ -69,7 +69,7 @@ def listbuilder():
 def keyFinder():  # grab & store keywords, call getDefinition
     response = openai.Completion.create(
         model="text-davinci-003",
-        prompt="Find the key vocabulary of this " + inputSource + " : " + inputText,
+        prompt="Find the key vocabulary of this text: " + inputText + " as it appears in a " + inputSource,
         temperature=0.7,
         max_tokens=64,
         top_p=1.0,
