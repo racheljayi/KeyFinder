@@ -15,6 +15,8 @@ $ git clone https://github.com/racheljayi/KeyFinder.git
 $ cd KeyFinder
 
 # add necessary api keys
+$ mkdir api_keys
+$ cd api_keys
 $ echo YOUR-API-KEY > google.api_key
 $ echo YOUR-API-KEY > openai.api_key
 
